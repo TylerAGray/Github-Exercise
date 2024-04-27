@@ -1,0 +1,74 @@
+Create a folder called learn_git_again
+tyler@Tyler:~/first$ mkdir /home/tyler/learn_git_again
+
+2. cd into the learn_git_again folder.
+tyler@Tyler:~/first$ cd /home/tyler/learn_git_again
+
+3.Create a file called third.txt.
+tyler@Tyler:~/learn_git_again$ touch third.txt
+
+4.Initialize an empty git repository.
+tyler@Tyler:~/learn_git_again$ git init
+
+5.Add third.txt to the staging area.
+tyler@Tyler:~/learn_git_again$ git add third.txt
+
+6.Commit with the message “adding third.txt”.
+tyler@Tyler:~/learn_git_again$ git commit -m "adding third.txt"
+
+7.Check out your commit with git log. 
+tyler@Tyler:~/learn_git_again$ git log
+commit 960dc22bfda8355509b726a296e56a233c1fef97 (HEAD -> master)
+Author: TylerAGray <TylerAGray97@gmail.com>
+Date:   Sat Apr 27 13:13:22 2024 -0700
+adding third.txt
+
+8.Create another file called fourth.txt. 
+tyler@Tyler:~/learn_git_again$ touch forth.txt
+
+9.Add fourth.txt to the staging area. 
+tyler@Tyler:~/learn_git_again$ git add forth.txt
+
+10.Commit with the message “adding fourth.txt”.
+tyler@Tyler:~/learn_git_again$ git commit -m "adding forth.txt"
+[master 9a0c5f8] adding forth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 forth.txt
+
+11.Remove the third.txt file. 
+tyler@Tyler:~/learn_git_again$ rm third.txt
+
+12.Add this change to the staging area.
+tyler@Tyler:~/learn_git_again$ git add third.txt
+
+13.Commit with the message “removing third.txt”. 
+tyler@Tyler:~/learn_git_again$ git commit -m "removing third.txt"
+[master 6fb6390] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+14.Check out your commits using git log. 
+tyler@Tyler:~/learn_git_again$ git log
+commit 6fb6390ec6ad056e20944ab4a9185babcfecb025 (HEAD -> master)
+Author: TylerAGray <TylerAGray97@gmail.com>
+Date:   Sat Apr 27 13:17:43 2024 -0700
+removing third.txt
+commit 9a0c5f82de4f5c4be3abdf8cc9768ff514ef2d7d
+Author: TylerAGray <TylerAGray97@gmail.com>
+Date:   Sat Apr 27 13:16:44 2024 -0700
+adding forth.txt
+commit 960dc22bfda8355509b726a296e56a233c1fef97
+Author: TylerAGray <TylerAGray97@gmail.com>
+Date:   Sat Apr 27 13:13:22 2024 -0700
+adding third.txt
+
+15.Change your global setting to core.pager=cat
+tyler@Tyler:~/learn_git_again$ git config --global core.pager "cat"
+
+16.Write the command to list all of the global configurations for git on your machine. You can type git config --global to find out how to do this
+tyler@Tyler:~/learn_git_again$ git config --global --list
+user.name=TylerAGray
+user.email=TylerAGray97@gmail.com
+core.pager=cat
+
+

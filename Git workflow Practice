@@ -1,0 +1,38 @@
+Navigate to the directory where you want to create your local repository
+cd /path/to/desired/directory
+
+Clone the remote repository to create a local copy
+git clone https://github.com/TylerAGray/Github-Exercise.git
+
+Navigate into the newly cloned repository directory
+cd Github-Exercise
+
+Create some files
+touch file1.txt file2.txt
+
+Add the files to the staging area
+git add .
+
+Commit the changes
+git commit -m "Initial commit"
+
+# Push the local changes to the remote repository
+git push origin master
+
+# Create a new branch
+git checkout -b new_branch
+
+# Create some files and make changes
+touch file3.txt
+echo "Some content" > file3.txt
+
+# Add the new files and changes
+git add .
+
+# Commit the changes to the new branch
+git commit -m "Adding file3.txt to new_branch"
+
+# Push the local branch to GitHub
+git push -u origin new_branch
+
+
